@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>Kill the Monster</h1>
+    </div>
+    <div class="container">
+        <div class="health">
+            <div class="monsterHealth">
+                <h2>Monster Health</h2>
+                <div class="loadingBarMonster">
+                    <div id="monster-color"></div>
+                </div>
+
+            </div>
+            <div class="yourHealth">
+                <h2>Your Health</h2>
+
+                <div class="loadingBarYou">
+                    <div id="your-color"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <div class="buttons1">
+
+                <div class="attack">
+                    <input id="btn" type="button" name="attack" value="ATTACK" onclick="attack()">
+                </div>
+                <div class="specialAttack">
+                    <input id="btnSpecial" type="button" name="specialAttack" value="SPECIAL ATTACK "
+                        onclick="specialAttack()">
+                </div>
+            </div>
+
+            <div class="buttons2">
+                <div class="heal">
+                    <input id="btnHeal" type="button" name="heal" value="HEAL" onclick="heal()">
+                </div>
+
+                <div class="giveup">
+                    <input id="btn" type="button" name="giveup" value="GIVE UP" onclick="YouLose()">
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            <div class="battleLog" id="log">
+                <h2>Battle Log</h2>
+            </div>
+            <div id="final"></div>
+        </div>
+
+    </div>
+</body>
+
+<script src="script.js">
+
+</script>
+
+</html>
