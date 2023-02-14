@@ -44,15 +44,17 @@ let yourHealth = 100;
 
 function attack() {
     count = 0;// counting heal button back to zero
+    // Math.floor(Math.random() * (max - min + 1)) + min;
 
-    let monsterAttack = Math.floor(Math.random() * 99) + 1;//random number between 1 and 99 
+
+    let monsterAttack = Math.floor(Math.random() * 30) + 1;//random number between 1 and 30 
     //damage done by player
-    console.log("attack: " + monsterAttack);//for testing purposes
+    console.log("random monster attack: " + monsterAttack);//for testing purposes
 
-    let yourAttack = Math.floor(Math.random() * 99) + 1;
+    let yourAttack = Math.floor(Math.random() * 50) + 1;
     //damage done by monster
 
-    console.log("your attack: " + yourAttack);
+    console.log("random your attack: " + yourAttack);
 
     monsterHealth -= monsterAttack;
     yourHealth -= yourAttack;
@@ -91,8 +93,7 @@ function attack() {
         // document.getElementById("player").style.color = "purple";
     }
     console.log("");
-    console.log("yourHealth" + yourHealth);
-    console.log("monsterHealth" + monsterHealth);
+
 
 
 
@@ -112,14 +113,16 @@ function Test() {
 }
 function specialAttack() {
     count = 0;// counting heal button back to zero
+    //Math.floor(Math.random() * (max - min + 1)) + min;
 
-    let random = (Math.floor(Math.random() * (99 - yourHealth)) + yourHealth);
+
+    let random = (Math.floor(Math.random() * (50 - yourHealth + 1)) + yourHealth);
 
     if (yourHealth < monsterHealth * 0.8) {
 
         //document.getElementById("btnSpecial").style.backgroundColor = "rgb(136, 0, 91)";
         console.log("RANDOM " + random);
-        monsterHealth -= random//value b/w your health and 99
+        monsterHealth -= random
         if (yourHealth === 0 && monsterHealth === 0 || monsterHealth <= 0 && yourHealth <= 0) {
             monsterHealth = 0;
             yourHealth = 0;
@@ -157,7 +160,7 @@ function heal() {
     count = count + 1;
 
     if (count <= 3) {
-        let randHeal = Math.floor(Math.random() * 99) + 1;
+        let randHeal = Math.floor(Math.random() * 50) + 1;
         console.log("");
         console.log("heal random: " + randHeal);
         console.log("heal count: " + count);
